@@ -1,7 +1,7 @@
 import express from 'express';
 import 'dotenv/config';
-import { initRoutes } from './routes';
-import route from './routes/route-controller';
+import { initRoutes } from './routes/proxy-router';
+import route from './routes/route-router';
 import { createSchemas } from './schemas';
 
 const PORT = process.env.PORT || 80;
