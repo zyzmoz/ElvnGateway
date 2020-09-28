@@ -5,6 +5,9 @@ export const createRoutesTable = async (knex: Knex) => {
     table.increments();
     table.string('url');
     table.string('target');
-    table.timestamps();
+    table.boolean('webSocket');
+    table.boolean('ignoreBasePath');
+    table.timestamp('created_at').defaultTo(knex.fn.now());
+    table.timestamp('updated_at').defaultTo(knex.fn.now());
   });
 }
