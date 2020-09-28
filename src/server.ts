@@ -19,12 +19,9 @@ http.createServer(process.env.REDIRECT_AS_HTTPS ? (req, res) => {
   res.end();
 } : server)
   .listen(PORT, () => console.log('Server listening on port:', PORT))
-  ;
+  .on('upgrade', initRoutes);
 
 // https.createServer({
 //   key: key,
 //   cert: cert
 // }, app).listen(443);
-
-
-// server.listen(PORT, );
