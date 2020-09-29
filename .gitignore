@@ -6,4 +6,5 @@ yarn.lock
 *.js
 __test__/
 .vscode
+
 *.log
