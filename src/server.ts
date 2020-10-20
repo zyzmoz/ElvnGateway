@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import http from 'http';
 import 'dotenv/config';
 import { initRoutes } from './routes/proxy-router';
@@ -10,6 +11,7 @@ const PORT = process.env.PORT || 80;
 const server = express();
 
 server.use(express.json());
+server.use(cors());
 createSchemas().then(() => server.use(route, initRoutes));
 
 http.createServer(process.env.REDIRECT_AS_HTTPS ? (req, res) => {
