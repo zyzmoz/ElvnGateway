@@ -33,5 +33,4 @@ The **/ui** route is reserved and it can be used to implement a page to manage a
 ### [WIP]
 |Status|Description|
 |:-----|:----------|
-|In Progress| UI to manage routes |
 |Queued| HTTPS support |
